@@ -246,9 +246,3 @@ python3 runProduction.py --fire Yellow --date 0311 --points 5000 --model 2026010
 - **Output:** Burn probability per vulnerable pixel; perimeter products are derived from thresholding and contouring.
 - **Data layout:** Each fire folder under `training_data/` or `0101_training_data/` should contain `perims/<MMDD>.npy`, `weather/<MMDD>.csv`, terrain `.npy` files, and (for training) next-day perimeter for labels.
 - **Fires &lt;100 acres** are excluded when fetching via `getData.py` and in recent-fire processing in `create_csv_prediction.py`.
-
----
-
-## License and contact
-
-For licensing and integration questions with the Space Science Institute wildfire prediction system, contact the repository maintainers.
