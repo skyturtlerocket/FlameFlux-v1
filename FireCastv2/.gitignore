@@ -1,0 +1,51 @@
+# Virtual Environment
+myvenv/
+myvenv310/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Training data and models (do not push to repo)
+data/
+models/
+*.h5
+training_data/
+training_databruh/
+NIFC_data/
+backup/
+farsite_files/
+Pics_Mlthesis/
+
+# Output: ignore images and logs; we only track prediction CSVs
+output/csv_images/
+output/csv_images_old/
+output/images/
+output/archive/
+output/datasets/
+output/figures/
+output/*.log
+output/*.png
+output/*.geojson
+# Keep: output/predictions_*.csv and output/csv/ (prediction CSVs)

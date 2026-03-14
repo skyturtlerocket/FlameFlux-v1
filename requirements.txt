@@ -1,0 +1,35 @@
+# FlameFlux / FireCast wildfire prediction — core dependencies
+# Python 3.10+ recommended
+
+# Core scientific stack
+numpy>=1.21.0,<3.0.0
+scipy>=1.7.0
+
+# Deep learning (TensorFlow includes Keras)
+tensorflow>=2.10.0,<2.20.0
+
+# Image and geometry
+opencv-python>=4.5.0
+Pillow>=9.0.0
+scikit-image>=0.19.0
+
+# Plotting and viz
+matplotlib>=3.5.0
+
+# Geospatial and geometry
+shapely>=1.8.0
+alphashape>=0.4.0
+rasterio>=1.2.0
+
+# Data and HTTP
+pandas>=1.3.0
+requests>=2.25.0
+
+# ML utilities (e.g. lib/histories.py)
+scikit-learn>=1.0.0
+
+# Google Earth Engine (for getData.py — requires auth)
+earthengine-api>=1.4.0
+
+# Compatibility (lib/image.py)
+six>=1.15.0

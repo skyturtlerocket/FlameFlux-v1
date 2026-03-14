@@ -1,0 +1,29 @@
+# virtual env
+myvenv/
+myvenv310/
+venv/
+.venv/
+env/
+
+# env files (often hold API keys)
+.env
+.env.local
+*.env
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
