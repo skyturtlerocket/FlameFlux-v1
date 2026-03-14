@@ -1,6 +1,6 @@
 # FlameFlux
 
-Wildfire spread prediction model for integration with the **Space Science Institute** wildfire prediction system. This repository contains the FireCast-style model, training pipeline, data ingestion, and prediction scripts.
+Wildfire spread prediction model for integration with the **Space Science Institute** wildfire prediction system. This repository contains the FlameFlux model, training pipeline, data ingestion, and prediction scripts.
 
 ---
 
