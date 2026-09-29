@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+scikit-image
+xgboost>=2.0
+rasterio
+shapely
+requests
+earthengine-api
+gdal  # LANDFIRE fuel warp (conda install gdal is easiest)

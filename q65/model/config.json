@@ -1,0 +1,12 @@
+{
+  "reachMultiplier": 1.3,
+  "gateThreshold": 0.25,
+  "dayGuardThreshold": 0.39,
+  "frontSpacing": 4.0,
+  "hotspotRadius": 16.0,
+  "hotspotMinDetections": 5,
+  "hotspotHours": 8,
+  "hotspotFallbackHours": 24,
+  "anchorMinDetections": 3,
+  "latestGrowthMinPct": 0.1
+}

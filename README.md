@@ -2,6 +2,8 @@
 
 Wildfire spread prediction model for integration with the **Space Science Institute** wildfire prediction system. This repository contains the FlameFlux model, training pipeline, data ingestion, and prediction scripts.
 
+- **q65 (current 24 h model):** `q65/`, see [q65/README.md](q65/README.md)
+
 ---
 
 ## Overview
