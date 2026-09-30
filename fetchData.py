@@ -1,10 +1,10 @@
-"""Fetch everything q65 needs for active WFIGS fires into cache/<fire>/.
+"""Fetch everything FlameFlux v2 needs for active WFIGS fires into cache/<fire>/.
 
     python fetchData.py                  # every qualifying active fire
     python fetchData.py --fire "Dome"    # one fire (WFIGS incident name)
 
 Needs EARTHENGINE_PROJECT (terrain, vegetation), LFPS_EMAIL (fuel) and,
-optionally, NASA_FIRMS_MAP_KEY (hotspots; without it q65 gates on perimeter history).
+optionally, NASA_FIRMS_MAP_KEY (hotspots; without it the model gates on perimeter history).
 """
 import argparse
 import io
@@ -374,7 +374,7 @@ def fetchHotspots(fireDir, grid):
     if os.path.exists(path):
         os.remove(path)
     if not key:
-        print("  NASA_FIRMS_MAP_KEY not set; q65 will gate on perimeter history")
+        print("  NASA_FIRMS_MAP_KEY not set; the model will gate on perimeter history")
         return
     area = ",".join(f"{v:.6f}" for v in grid["bounds"])
     frames = []
@@ -410,7 +410,7 @@ def fetchFire(fire, root=cacheDir, ee=None):
     if not has("fuel.npy"):
         try:
             fetchFuel(fireDir, grid)
-        except Exception as error:  # q65 still runs, without fuel features
+        except Exception as error:  # the model still runs, without fuel features
             print(f"  fuel fetch failed, forecasting without fuel: {error}")
     issued = pd.Timestamp.now(tz="UTC").tz_localize(None)
     fetchWeather(fireDir, grid, issued)

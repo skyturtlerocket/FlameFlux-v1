@@ -1,4 +1,4 @@
-"""Run q65 on one fetched fire: 24 h growth, hourly arrival time, and perimeter exports.
+"""Run FlameFlux v2 on one fetched fire: 24 h growth, hourly arrival time, and perimeter exports.
 
     python runModel.py --fire Dome          # reads cache/Dome/, writes output/Dome/
 
@@ -436,7 +436,7 @@ def recentGrowthGate(front, s):
     return opened if opened.any() else np.ones(len(opened), bool)  # nothing grew: let the model decide
 
 
-# ---------------------------------------------------------------- q65 model
+# ---------------------------------------------------------------- v2 model
 def loadModels(folder=modelDir):
     with open(os.path.join(folder, "config.json")) as f:
         config = json.load(f)
@@ -661,7 +661,7 @@ def runFire(fireDir, models=None, outDir=outputDir):
     np.savez_compressed(os.path.join(folder, stamp + ".npz"), arrivalHours=arrival, window=np.asarray(s["window"]),
                         hours1=hours1, perimeters1=perimeters1, hours5=hours5, perimeters5=perimeters5,
                         reach=reach, gate=gate, frontPoints=front["points"])
-    props = {"fire": fire["name"], "irwin": fire["irwin"], "model": "q65",
+    props = {"fire": fire["name"], "irwin": fire["irwin"], "model": "v2",
              "issued": issued.isoformat() + "Z", "validTo": (issued + pd.Timedelta(hours=24)).isoformat() + "Z",
              "perimeterCaptured": fire["captured"], "historyDates": len(history), "degradedHistory": degraded,
              "containment": fire["containment"], "acres": fire["acres"], **info}

@@ -1,6 +1,6 @@
-# FlameFlux q65
+# FlameFlux v2
 
-24-hour wildfire perimeter forecast for active US fires. q65 predicts how far each
+24-hour wildfire perimeter forecast for active US fires. FlameFlux v2 predicts how far each
 segment of the current perimeter will advance in the next 24 h, then turns that into
 hourly arrival times and perimeters.
 

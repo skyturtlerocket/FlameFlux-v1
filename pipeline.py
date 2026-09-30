@@ -1,4 +1,4 @@
-"""Full q65 pipeline: discover active fires, fetch data, forecast, arrival time, exports.
+"""Full FlameFlux v2 pipeline: discover active fires, fetch data, forecast, arrival time, exports.
 
     python pipeline.py                  # every qualifying active WFIGS fire
     python pipeline.py --fire "Dome"    # one fire
